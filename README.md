@@ -25,8 +25,8 @@ Import component:
 ```javascript
 import Alpine from 'alpinejs'
 
-// If you want to use Multiselect component:
-import multiselect from './multiselect'
+// If you want to use the Multiselect component:
+import { multiselect } from 'mistral-ui'
 Alpine.data('multiselect', multiselect);
 
 window.Alpine = Alpine

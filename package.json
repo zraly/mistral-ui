@@ -1,8 +1,13 @@
 {
   "name": "mistral-ui",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Tailwind CSS + Alpine.js components",
   "main": "index.js",
+  "type": "module",
+  "files": [
+    "index.js",
+    "components"
+    ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,3 +1,1 @@
-import Multiselect from "./components/multiselect";
-
-export { Multiselect }
+export {default as multiselect} from  './components/multiselect/multiselect.js';
