@@ -4,7 +4,7 @@ export default () => ({
     select:
       "border w-full border-gray-300 rounded-lg py-2 px-2 text-sm flex gap-2 items-center cursor-pointer bg-white",
     menuWrapper:
-      "w-full rounded-lg py-1.5 text-sm mt-1 shadow-lg absolute bg-white",
+      "w-full rounded-lg py-1.5 text-sm mt-1 shadow-lg absolute bg-white z-10",
     menu: "max-h-52 overflow-y-auto",
     textList: "overflow-x-hidden text-ellipsis grow whitespace-nowrap",
     trigger: "px-2 py-2 rounded bg-neutral-100",
