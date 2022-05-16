@@ -33,7 +33,7 @@ window.Alpine = Alpine
 Alpine.start();
 ```
 
-Copy & paste the HTML form the [component detail page](https:mistralui.com/component-multiselect):
+Copy & paste the HTML form the [component detail page](https://mistralui.com/component-multiselect):
 
 ```html
 <select multiple x-data="multiselect">
