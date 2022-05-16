@@ -10,17 +10,17 @@ npm i mistral-ui
 
 ## Usage
 
-### Basic HTML components
+### Static HTML components
 
-Just copy HTML example and modify as you need.
+Just copy & paste into your HTML.
 
 ```html
 <span class="text-neutral">badge</span>
 ```
 
-### Alpine.js components
+### Dynamic components using Alpine.js
 
-Import component:
+Import component into your man js file:
 
 ```javascript
 import Alpine from 'alpinejs'
@@ -33,7 +33,7 @@ window.Alpine = Alpine
 Alpine.start();
 ```
 
-Apply `x-data` attribute on the element:
+Copy & paste the HTML form the [component detail page](https:mistralui.com/component-multiselect):
 
 ```html
 <select multiple x-data="multiselect">
