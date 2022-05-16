@@ -1,8 +1,8 @@
 <div x-data="modal">
     <button class="btn" x-bind="modalTrigger">Show modal</button>
     <template x-teleport="body">
-        <div x-bind="modalBackground" class="fixed top-0 left-0 flex items-center justify-center w-screen h-screen bg-neutral-500/50 z-50 overflow-y-auto">
-            <div x-bind="modalDialog" class="h-auto p-6 mx-3 relative max-w-lg bg-white rounded-lg shadow-xl lg:mx-0">
+        <div x-bind="modalBackground" class="fixed top-0 left-0 flex items-center justify-center w-screen h-screen max-w-full bg-neutral-500/50 z-50 overflow-y-auto">
+            <div x-bind="modalDialog" class="h-auto p-6 mx-3 relative w-full max-w-md bg-white rounded-lg shadow-xl lg:mx-0">
                 <h3 class="text-lg font-bold">
                     Modal title
                 </h3>

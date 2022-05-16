@@ -10,7 +10,24 @@ export default () => ({
 		['x-show']() {
 			return this.open
 		},
-		['x-transition.opacity']() {}
+		['x-transition:enter']() {
+			return 'transition duration-300';
+		},
+		['x-transition:enter-start']() {
+			return 'opacity-0';
+		},
+		['x-transition:enter-end']() {
+			return 'opacity-1';
+		},
+		['x-transition:leave']() {
+			return 'transition duration-300';
+		},
+		['x-transition:leave-start']() {
+			return 'opacity-1';
+		},
+		['x-transition:leave-end']() {
+			return 'opacity-0';
+		}
 	},
 	modalDialog: {
 		['x-show']() {
@@ -31,7 +48,16 @@ export default () => ({
         },
         ['x-transition:enter-end']() {
             return 'opacity-1 translate-y-0';
-        }
+        },
+		['x-transition:leave']() {
+			return 'transition ease-out duration-300';
+		},
+		['x-transition:leave-start']() {
+			return 'opacity-1 translate-y-0';
+		},
+		['x-transition:leave-end']() {
+			return 'opacity-0 -translate-y-12';
+		}
 
 	}
 })
