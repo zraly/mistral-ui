@@ -13,9 +13,11 @@ export default () => ({
 				document.body.style.paddingRight = `${scrollBarWidth + parseFloat(originalComputedPaddingRight || 0)}px`;
 
 			} else {
-				document.body.classList.remove('overflow-hidden')
-				document.body.style.paddingRight = this.originalBodyPaddingRight || null;
-				document.body.style.overflow = this.originalBodyOverflow;
+				setTimeout(() => {
+					document.body.classList.remove('overflow-hidden')
+					document.body.style.paddingRight = this.originalBodyPaddingRight || null;
+					document.body.style.overflow = this.originalBodyOverflow;
+				}, 300);
 			}
 		})
 	},
