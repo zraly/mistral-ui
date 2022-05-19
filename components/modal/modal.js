@@ -1,6 +1,24 @@
 export default () => ({
 	open: false,
+	originalBodyPaddingRight: null,
+	originalBodyOverflow: null,
+	init() {
+		this.$watch('open', value => {
+			if (value === true) {
+				this.originalBodyOverfow = window.getComputedStyle(document.body).overflow;
+				this.originalPaddingRight = document.body.style.paddingRight;
+				const originalComputedPaddingRight = window.getComputedStyle(document.body).paddingRight;
+				const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+				document.body.classList.add('overflow-hidden')
+				document.body.style.paddingRight = `${scrollBarWidth + parseFloat(originalComputedPaddingRight || 0)}px`;
 
+			} else {
+				document.body.classList.remove('overflow-hidden')
+				document.body.style.paddingRight = this.originalBodyPaddingRight || null;
+				document.body.style.overflow = this.originalBodyOverflow;
+			}
+		})
+	},
 	modalTrigger: {
 		['@click']() {
 			this.open = ! this.open

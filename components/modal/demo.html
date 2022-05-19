@@ -1,0 +1,42 @@
+<div x-data="modal">
+  <button
+    class="bg-blue-400 text-white px-4 py-2 rounded-lg font-semibold hover:brightness-110"
+    x-bind="modalTrigger"
+  >
+    Show modal
+  </button>
+
+  <div
+    x-bind="modalBackground"
+    class="fixed top-0 left-0 flex items-center justify-center w-screen h-screen max-w-full bg-neutral-500/50 z-50 overflow-y-auto p-3 lg:p-6"
+    style="display: none"
+  >
+    <div
+      x-bind="modalDialog"
+      class="h-auto p-6 m-auto relative w-full max-w-md bg-white rounded-lg shadow-xl"
+      role="dialog"
+      aria-hidden="true"
+      style="display: none"
+    >
+      <h3 class="text-lg font-bold">Modal title</h3>
+      <div class="mt-6 gap-3 flex flex-wrap">
+        <div class="flex gap-3 flex-wrap">
+          <div class="bg-neutral-300 rounded w-28 h-4"></div>
+          <div class="bg-neutral-300 rounded w-16 h-4 flex-auto"></div>
+          <div class="bg-neutral-300 rounded w-20 h-4"></div>
+          <div class="bg-neutral-300 rounded w-36 h-4 flex-auto"></div>
+          <div class="bg-neutral-300 rounded w-24 h-4"></div>
+          <div class="bg-neutral-300 rounded w-12 h-4 flex-auto"></div>
+          <div class="bg-neutral-300 rounded w-12 h-4"></div>
+        </div>
+
+        <button
+          class="bg-blue-400 text-white px-4 py-2 rounded-lg font-semibold hover:brightness-110 mt-6 mx-auto"
+          @click="$data.open = false"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
