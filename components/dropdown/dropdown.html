@@ -1,0 +1,11 @@
+<div x-data="dropdown" class="relative">
+    <button class="btn" x-bind="trigger" aria-expanded="false">
+        Dropdown button
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 inline ml-1"><path stroke-linecap="round" stroke-width="2" d="M5 10l7 7 7-7"/></svg>
+    </button>
+    <ul x-bind="menu" x-trap="open" class="absolute bg-white rounded-lg shadow-lg mt-3 py-3 w-max">
+        <li><a class="px-4 py-2 block hover:bg-neutral-100 whitespace-nowrap" href="#">Action</a></li>
+        <li><a class="px-4 py-2 block hover:bg-neutral-100 whitespace-nowrap" href="#">Another action</a></li>
+        <li><a class="px-4 py-2 block hover:bg-neutral-100 whitespace-nowrap" href="#">Something else here very long</a></li>
+    </ul>
+</div>
