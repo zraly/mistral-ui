@@ -14,7 +14,8 @@ export default () => ({
     optionGroupTitle:
       "px-3 py-2 text-neutral-400 uppercase font-bold text-xs sticky top-0 bg-white",
     clearSearchBtn: "absolute p-3 right-0 top-1 text-neutral-600",
-    label: "hover:bg-neutral-50 cursor-pointer flex py-2 px-3",
+    label: "hover:bg-neutral-100 cursor-pointer flex py-2 px-3",
+    focusedItem: "bg-neutral-100",
   },
 
   icons: {
@@ -112,6 +113,14 @@ export default () => ({
         label.setAttribute("for", checkBox.id);
         label.innerText = item.innerText;
 
+        checkBox.addEventListener('focus', () => {
+          label.classList.add(style.focusedItem);
+        });
+        checkBox.addEventListener('blur', () => {
+          label.classList.remove(style.focusedItem);
+        });
+
+
         checkBox.setAttribute("x-bind", "checkBox");
 
         if (item.hasAttribute("selected")) {
@@ -175,6 +184,15 @@ export default () => ({
         ["x-show"]() {
           return this.open;
         },
+        ["x-trap.noscroll"]() {
+          return this.open;
+        },
+        ["@keydown.down"]() {
+          this.$focus.wrap().next();
+        },
+        ["@keydown.up"]() {
+          this.$focus.wrap().previous();
+        },
         ["x-transition"]() {},
         ["@keydown.escape.window"]() {
           this.open = false;
@@ -185,7 +203,7 @@ export default () => ({
         ["x-init"]() {
           this.items = this.$el.querySelectorAll("li");
           this.regenerateTextItems();
-        },
+        }
       },
       checkBox: {
         ["@change"]() {
