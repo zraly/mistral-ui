@@ -5,21 +5,21 @@
         "focus"
     ],
     "js": true,
-    "variations": [
-        {
+    "variations": {
+        "default": {
             "name": "Default",
             "desc": "Classic dropdown menu.",
             "file": "default"
         },
-        {
+        "dropup": {
             "name": "Dropup",
             "desc": "Dropup menu, where menu show above the trigger.",
             "file": "dropup"
         },
-        {
+        "link": {
             "name": "Triggered by a link",
             "desc": "Using an <a> element as a trigger",
             "file": "link"
         }
-    ]
+    }
 }
