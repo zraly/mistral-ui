@@ -1,0 +1,15 @@
+{
+    "name": "modal",
+    "desc": "Modal dialog with slick animation, key navigation, no background scrolling and layout shifting.",
+    "plugins": [
+        "focus"
+    ],
+    "js": true,
+    "variations": {
+        "default": {
+            "name": "Default",
+            "desc": "",
+            "file": "default"
+        }
+    }
+}

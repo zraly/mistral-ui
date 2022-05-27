@@ -1,0 +1,15 @@
+{
+    "name": "multiselect",
+    "desc": "Multiselect with filtering and item groups support. It's completely styled by JS, so you only have to add a <code>x-data=\"multiselect\"</code> parameter.",
+    "plugins": [
+        "focus"
+    ],
+    "js": true,
+    "variations": {
+        "default": {
+            "name": "Default",
+            "desc": "",
+            "file": "default"
+        }
+    }
+}
