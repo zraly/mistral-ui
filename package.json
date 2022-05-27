@@ -1,6 +1,6 @@
 {
   "name": "mistral-ui",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "Tailwind CSS + Alpine.js components",
   "main": "index.js",
   "type": "module",
