@@ -1,0 +1,25 @@
+{
+    "name": "dropdown",
+    "desc": "Dropdown menu with key navigation and drop-up variation.",
+    "plugins": [
+        "focus"
+    ],
+    "js": true,
+    "variations": [
+        {
+            "name": "Default",
+            "desc": "Classic dropdown menu.",
+            "file": "default"
+        },
+        {
+            "name": "Dropup",
+            "desc": "Dropup menu, where menu show above the trigger.",
+            "file": "dropup"
+        },
+        {
+            "name": "Triggered by a link",
+            "desc": "Using an <a> element as a trigger",
+            "file": "link"
+        }
+    ]
+}
