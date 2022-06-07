@@ -1,12 +1,13 @@
 {
   "name": "mistral-ui",
-  "version": "1.2.8",
+  "version": "1.2.12",
   "description": "Tailwind CSS + Alpine.js components",
   "main": "index.js",
   "type": "module",
   "files": [
     "index.js",
-    "components"
+    "components",
+    "dist"
   ],
   "scripts": {
     "build": "esbuild index.js --bundle --minify --outfile=dist/cdn.min.js"

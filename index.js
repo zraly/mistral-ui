@@ -1,6 +1,12 @@
-export {default as multiselect} from  './components/multiselect/multiselect.js';
-export {default as modal} from  './components/modal/modal.js';
-export {default as dropdown} from  './components/dropdown/dropdown.js';
+import multiselect from './components/multiselect/multiselect.js';
+import modal from './components/modal/modal.js';
+import dropdown from './components/dropdown/dropdown.js';
+
+export default {
+    multiselect,
+    modal,
+    dropdown
+}
 
 window.Mistral = {
     multiselect,
