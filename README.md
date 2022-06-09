@@ -10,30 +10,7 @@ npm i mistral-ui
 
 ## Usage
 
-### Static HTML components
-
-Just copy & paste into your HTML.
-
-```html
-<span class="text-neutral">badge</span>
-```
-
-### Dynamic components using Alpine.js
-
-Import component into your man js file:
-
-```javascript
-import Alpine from 'alpinejs'
-
-// If you want to use the Multiselect component:
-import { multiselect } from 'mistral-ui'
-Alpine.data('multiselect', multiselect);
-
-window.Alpine = Alpine
-Alpine.start();
-```
-
-Copy & paste the HTML form the [component detail page](https://mistralui.com/component-multiselect):
+Add a `x-data` attribute to your element:
 
 ```html
 <select multiple x-data="multiselect">
@@ -48,4 +25,32 @@ Copy & paste the HTML form the [component detail page](https://mistralui.com/com
     <option value="Berlin">Berlin</option>
   </optgroup>
 </select>
+```
+
+### via CDN
+
+1. Put this script tag into your head section:
+
+```html
+<script defer src="https://unpkg.com/mistral-ui@1.x.x/dist/cdn.min.js"></script>
+```
+
+2. Initialize desired component via Alpine's `alpine:init` event:
+
+```javascript
+document.addEventListener('alpine:init', () => {
+	Alpine.data('multiselect', Mistral.multiselect)
+})
+```
+
+### via NPM
+
+1. Import component into your man js file:
+
+```javascript
+import Alpine from 'alpinejs'
+import { multiselect } from 'mistral-ui'
+
+Alpine.data('multiselect', multiselect);
+Alpine.start();
 ```
