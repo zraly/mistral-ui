@@ -2,7 +2,7 @@ import multiselect from './components/multiselect/multiselect.js';
 import modal from './components/modal/modal.js';
 import dropdown from './components/dropdown/dropdown.js';
 
-export default {
+export {
     multiselect,
     modal,
     dropdown
