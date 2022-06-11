@@ -6,7 +6,7 @@ export default () => ({
       top:
         "absolute bg-white rounded-lg shadow-lg py-3 w-max -translate-y-full -mt-3 top-0"
     },
-    menuItem: "px-4 py-2 block outline-0 focus:bg-neutral-100 hover:bg-neutral-100 whitespace-nowrap",
+    menuItem: "px-4 py-2 flex gap-2 items-center outline-0 focus:bg-neutral-100 hover:bg-neutral-100 whitespace-nowrap",
   },
   position: "bottom",
   open: false,
@@ -48,23 +48,23 @@ export default () => ({
       this.$focus.wrap().previous();
     },
     ["x-transition:enter"]() {
-      return "margin ease-[cubic-bezier(.3,2.3,.6,1)] duration-200";
+      return "ease-[cubic-bezier(.3,2.3,.6,1)] duration-200";
     },
     ["x-transition:enter-start"]() {
-      return this.position === "bottom" ? "opacity-0 mt-0" : "opacity-0 mt-0";
+      return this.position === "bottom" ? "!opacity-0 mt-0" : "!opacity-0 mt-0";
     },
     ["x-transition:enter-end"]() {
       return this.position === "bottom"
-        ? "opacity-1 mt-3"
-        : "opacity-1 -mt-3";
+        ? "!opacity-1 !mt-3"
+        : "!opacity-1 !-mt-3";
     },
     ["x-transition:leave"]() {
       return "margin ease-out duration-200";
     },
     ["x-transition:leave-start"]() {
       return this.position === "bottom"
-        ? "opacity-1 mt-3"
-        : "opacity-1 -mt-3";
+        ? "!opacity-1 !mt-3"
+        : "!opacity-1 !-mt-3";
     },
     ["x-transition:leave-end"]() {
       return this.position === "bottom" ? "opacity-0 mt-0" : "opacity-0 mt-0";
