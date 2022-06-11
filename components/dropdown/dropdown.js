@@ -51,7 +51,7 @@ export default () => ({
       return "ease-[cubic-bezier(.3,2.3,.6,1)] duration-200";
     },
     ["x-transition:enter-start"]() {
-      return this.position === "bottom" ? "!opacity-0 mt-0" : "!opacity-0 mt-0";
+      return this.position === "bottom" ? "!opacity-0 !mt-0" : "!opacity-0 !mt-0";
     },
     ["x-transition:enter-end"]() {
       return this.position === "bottom"
