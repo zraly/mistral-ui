@@ -59,7 +59,7 @@ export default () => ({
         : "!opacity-1 !-mt-3";
     },
     ["x-transition:leave"]() {
-      return "margin ease-out duration-200";
+      return "ease-out duration-200";
     },
     ["x-transition:leave-start"]() {
       return this.position === "bottom"
@@ -67,7 +67,7 @@ export default () => ({
         : "!opacity-1 !-mt-3";
     },
     ["x-transition:leave-end"]() {
-      return this.position === "bottom" ? "opacity-0 mt-0" : "opacity-0 mt-0";
+      return this.position === "bottom" ? "!opacity-0 !mt-0" : "!opacity-0 !mt-0";
     }
   }
 });
