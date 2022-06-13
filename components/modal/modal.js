@@ -3,13 +3,14 @@ export default () => ({
 	originalBodyPaddingRight: null,
 	originalBodyOverflow: null,
 	style: {
-		background: "fixed top-0 left-0 flex w-screen h-screen max-w-full bg-neutral-500/50 z-50 overflow-y-auto",
-		dialog: "h-auto p-6 m-auto relative w-full max-w-md bg-white rounded-lg shadow-xl m-3",
+		background: "fixed top-0 left-0 flex w-screen h-screen max-w-full bg-neutral-500/50 z-50 overflow-y-auto p-3",
+		dialog: "h-auto p-6 m-auto relative w-full max-w-md bg-white rounded-lg shadow-xl",
 	  },
 	init() {
 		const style = this.style;
-		const backgroundElement = this.$el.querySelector("[x-bind=background]");
-		const dialogElement = this.$el.querySelector("[x-bind=dialog]");
+		const templateContent = this.$el.querySelector("template").content;
+		const backgroundElement = templateContent.querySelector("[x-bind=background]");
+		const dialogElement = templateContent.querySelector("[x-bind=dialog]");
 		backgroundElement.className = style.background;
 		dialogElement.className = style.dialog;
 
@@ -31,12 +32,12 @@ export default () => ({
 			}
 		})
 	},
-	modalTrigger: {
+	trigger: {
 		['@click']() {
 			this.open = ! this.open
 		},
 	},
-	modalBackground: {
+	background: {
 		['x-show']() {
 			return this.open
 		},
@@ -59,7 +60,7 @@ export default () => ({
 			return 'opacity-0';
 		}
 	},
-	modalDialog: {
+	dialog: {
 		['x-show']() {
 			return this.open
 		},
