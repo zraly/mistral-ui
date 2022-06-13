@@ -5,28 +5,29 @@
   >
     Show modal
   </button>
+  <template x-teleport="body">
+    <div x-bind="background">
+      <div x-bind="dialog" role="dialog" aria-hidden="true">
+        <h3 class="text-lg font-bold">Modal title</h3>
+        <div class="mt-6 gap-3 flex flex-wrap">
+          <div class="flex gap-3 flex-wrap">
+            <div class="bg-neutral-300 rounded w-28 h-4"></div>
+            <div class="bg-neutral-300 rounded w-16 h-4 flex-auto"></div>
+            <div class="bg-neutral-300 rounded w-20 h-4"></div>
+            <div class="bg-neutral-300 rounded w-36 h-4 flex-auto"></div>
+            <div class="bg-neutral-300 rounded w-24 h-4"></div>
+            <div class="bg-neutral-300 rounded w-12 h-4 flex-auto"></div>
+            <div class="bg-neutral-300 rounded w-12 h-4"></div>
+          </div>
 
-  <div x-bind="background">
-    <div x-bind="dialog" role="dialog" aria-hidden="true">
-      <h3 class="text-lg font-bold">Modal title</h3>
-      <div class="mt-6 gap-3 flex flex-wrap">
-        <div class="flex gap-3 flex-wrap">
-          <div class="bg-neutral-300 rounded w-28 h-4"></div>
-          <div class="bg-neutral-300 rounded w-16 h-4 flex-auto"></div>
-          <div class="bg-neutral-300 rounded w-20 h-4"></div>
-          <div class="bg-neutral-300 rounded w-36 h-4 flex-auto"></div>
-          <div class="bg-neutral-300 rounded w-24 h-4"></div>
-          <div class="bg-neutral-300 rounded w-12 h-4 flex-auto"></div>
-          <div class="bg-neutral-300 rounded w-12 h-4"></div>
+          <button
+            class="bg-blue-400 text-white px-4 py-2 rounded-lg font-semibold hover:brightness-110 mt-6 mx-auto"
+            @click="$data.open = false"
+          >
+            Close
+          </button>
         </div>
-
-        <button
-          class="bg-blue-400 text-white px-4 py-2 rounded-lg font-semibold hover:brightness-110 mt-6 mx-auto"
-          @click="$data.open = false"
-        >
-          Close
-        </button>
       </div>
     </div>
-  </div>
+  </template>
 </div>
