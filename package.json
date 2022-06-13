@@ -1,7 +1,8 @@
 {
   "name": "mistral-ui",
-  "version": "1.2.20",
+  "version": "1.2.22-beta.0",
   "description": "Tailwind CSS + Alpine.js components",
+  "homepage": "https://mistralui.com",
   "main": "index.js",
   "type": "module",
   "files": [

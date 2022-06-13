@@ -2,7 +2,17 @@ export default () => ({
 	open: false,
 	originalBodyPaddingRight: null,
 	originalBodyOverflow: null,
+	style: {
+		background: "fixed top-0 left-0 flex w-screen h-screen max-w-full bg-neutral-500/50 z-50 overflow-y-auto",
+		dialog: "h-auto p-6 m-auto relative w-full max-w-md bg-white rounded-lg shadow-xl m-3",
+	  },
 	init() {
+		const style = this.style;
+		const backgroundElement = this.$el.querySelector("[x-bind=background]");
+		const dialogElement = this.$el.querySelector("[x-bind=dialog]");
+		backgroundElement.className = style.background;
+		dialogElement.className = style.dialog;
+
 		this.$watch('open', value => {
 			if (value === true) {
 				this.originalBodyOverfow = window.getComputedStyle(document.body).overflow;
@@ -53,7 +63,9 @@ export default () => ({
 		['x-show']() {
 			return this.open
 		},
-
+		["x-trap"]() {
+			return this.open;
+			},
 		['@keydown.escape.window']() {
 			this.open = false;
 		},
