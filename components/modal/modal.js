@@ -30,13 +30,17 @@ export default () => ({
 					document.body.style.overflow = this.originalBodyOverflow;
 				}, 300);
 			}
-		})
+		});
+		this.
 	},
 	trigger: {
 		['@click']() {
 			this.open = ! this.open
 		},
 	},
+	['@close-modals.window']() {
+		return this.open = false;
+	},	
 	background: {
 		['x-show']() {
 			return this.open
