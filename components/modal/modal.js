@@ -31,16 +31,12 @@ export default () => ({
 				}, 300);
 			}
 		});
-		this.
 	},
 	trigger: {
 		['@click']() {
 			this.open = ! this.open
 		},
 	},
-	['@close-modals.window']() {
-		return this.open = false;
-	},	
 	background: {
 		['x-show']() {
 			return this.open
@@ -65,6 +61,9 @@ export default () => ({
 		}
 	},
 	dialog: {
+		['@mistral-close-modals.window']() {
+			return this.open = false;
+		},
 		['x-show']() {
 			return this.open
 		},
