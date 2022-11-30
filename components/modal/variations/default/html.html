@@ -1,9 +1,14 @@
 <div x-data="modal">
-  <button class="btn" x-bind="trigger">Show modal</button>
+  <button class="btn" x-bind="trigger" data-mistral-modal-id="modal-1">Show modal 1</button>
+  <button class="btn" x-bind="trigger" data-mistral-modal-id="modal-2">Show modal 2</button>
   <template x-teleport="body">
     <div x-bind="background">
-      <div x-bind="dialog" role="dialog" aria-hidden="true">
-        <h3 class="text-lg font-bold">Modal title</h3>
+      <div x-bind="dialog" role="dialog" aria-hidden="true" id="modal-1">
+        <h3 class="text-lg font-bold">Modal 1 title</h3>
+        <div class="mt-6">Content</div>
+      </div>
+      <div x-bind="dialog" role="dialog" aria-hidden="true" id="modal-2">
+        <h3 class="text-lg font-bold">Modal 2 title</h3>
         <div class="mt-6">Content</div>
       </div>
     </div>
