@@ -74,8 +74,8 @@ export default () => ({
     },
   },
   dialog: {
-    ['@mistral-close-modals.window']() {
-      return (this.openedModalId === null);
+    ['@mistral-close-modal.window']() {
+      this.openedModalId = null;
     },
     ['x-show']() {
       return this.openedModalId === this.$el.id;
