@@ -10,15 +10,18 @@ export default () => ({
   },
   init() {
     const style = this.style;
-    const templateContent = this.$el.querySelector('template').content;
-    const backgroundElement = templateContent.querySelector(
-      '[x-bind=background]'
-    );
-    const dialogElements = templateContent.querySelectorAll('[x-bind=dialog]');
-    dialogElements.forEach(dialogElement => {
+    const templates = this.$el.querySelectorAll('template');
+    templates.forEach((template, index) => {
+      const templateContent = template.content;
+      const backgroundElement = templateContent.querySelector(
+          '[x-bind=background]'
+      );
       backgroundElement.className = style.background;
+      const dialogElement = templateContent.querySelector('[x-bind=dialog]');
       dialogElement.className = style.dialog;
-      });
+
+    });
+
     
     this.$watch('open', (value) => {
       if (value !== null) {
@@ -52,7 +55,8 @@ export default () => ({
   },
   background: {
     ['x-show']() {
-      return this.openedModalId !== null;
+      const innderDialogId = this.$el.querySelector('[x-bind=dialog]').id;
+      return this.openedModalId === innderDialogId;
     },
     ['x-transition:enter']() {
       return 'transition duration-300';
