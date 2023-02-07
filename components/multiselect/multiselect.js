@@ -43,6 +43,7 @@ export default () => ({
     textList.className = style.textList;
 
     const triggerBtn = document.createElement("button");
+    triggerBtn.type = "button";
     triggerBtn.className = style.trigger;
     triggerBtn.innerHTML = this.icons.arrowDown;
 
@@ -67,6 +68,7 @@ export default () => ({
     search.setAttribute("placeholder", "filter");
 
     const clearSearchBtn = document.createElement("button");
+    clearSearchBtn.type = "button";
     clearSearchBtn.className = style.clearSearchBtn;
     clearSearchBtn.setAttribute("x-bind", "clearSearchBtn");
     clearSearchBtn.innerHTML = this.icons.times;
