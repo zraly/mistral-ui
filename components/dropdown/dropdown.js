@@ -2,9 +2,9 @@ export default () => ({
   style: {
     wrapper: "relative",
     menu: {
-      bottom: "absolute bg-white rounded-lg shadow-lg py-3 w-max mt-3",
+      bottom: "absolute bg-white rounded-lg shadow-lg py-3 w-max mt-3 z-10",
       top:
-        "absolute bg-white rounded-lg shadow-lg py-3 w-max -translate-y-full -mt-3 top-0"
+        "absolute bg-white rounded-lg shadow-lg py-3 w-max -translate-y-full -mt-3 top-0 z-10"
     },
     menuItem: "px-4 py-2 flex gap-2 items-center outline-0 focus:bg-neutral-100 hover:bg-neutral-100 whitespace-nowrap",
   },
